@@ -1,6 +1,7 @@
 package lonelypiscis.advancedgui;
 
 import net.minecraft.init.Blocks;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -14,7 +15,7 @@ public class AdvancedGui
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-		// some example code
-        System.out.println("I am a Example Modsfd!");
+        MinecraftForge.EVENT_BUS.register(new lonelypiscis.advancedgui.EventHandler());
     }
+    
 }
